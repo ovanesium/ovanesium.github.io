@@ -7,6 +7,9 @@ fetch("https://randomuser.me/api/")
     console.log(results);
     document.getElementById(
       "nombre"
-    ).innerHTML = `CV de ${results.name.title} ${results.name.first} ${results.name.last}`;
+    ).innerHTML = `${results.name.title} ${results.name.first} ${results.name.last}`;
+    document.getElementById("foto-perfil").src = results.picture.large;
+    document.getElementById("email").innerHTML = results.email;
+    document.getElementById("telefono").innerHTML = results.phone;
   })
   .catch((error) => console.error(error));
