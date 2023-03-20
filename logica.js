@@ -10,6 +10,6 @@ fetch("https://randomuser.me/api/")
     ).innerHTML = `${results.name.title} ${results.name.first} ${results.name.last}`;
     document.getElementById("foto-perfil").src = results.picture.large;
     document.getElementById("email").innerHTML = results.email;
-    document.getElementById("telefono").innerHTML = results.phone;
+    document.getElementById("telefono").innerHTML = `+54 ${results.phone}`;
   })
   .catch((error) => console.error(error));
